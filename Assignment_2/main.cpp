@@ -6,9 +6,9 @@ using namespace std;
 int main(){
     cout << "Creating new Libary" << endl;
     SongLibrary * lib = new SongLibrary();
-    Song * newSong = new Song(1234,"bob","Collection");
-    Song * newSong2 = new Song(1234,"bobSTANLDER","Collection");
-    Song * newSong3 = new Song(1234,"boDDDDD","Collection");
+    Song * newSong =    new Song(1234,"bob","Collection");
+    Song * newSong2 =   new Song(1234,"bobSTANLDER","Collection");
+    Song * newSong3 =   new Song(1234,"boDDDDD","Collection");
     
     cout << "adding song to lib" << endl;
     lib -> addSong(newSong);

@@ -1,6 +1,7 @@
 #include "track.h"
 
-Track::Track(string mp3, int albumID, int songID, int trackNumber){
+Track::Track(int trackID, string mp3, int albumID, int songID, int trackNumber){
+    this -> trackID     = trackID;
     this -> mp3         = mp3;
     this -> albumID     = albumID;
     this -> songID      = songID;
@@ -8,6 +9,7 @@ Track::Track(string mp3, int albumID, int songID, int trackNumber){
 }
 
 Track::Track(Track & anTrack){
+    this -> trackID     = anTrack.trackID;    
     this -> mp3         = anTrack.mp3;
     this -> albumID     = anTrack.albumID;
     this -> songID      = anTrack.songID;
@@ -18,6 +20,9 @@ Track::~Track(){}
 
 string Track::getFileName(void){
     return mp3;
+}
+int Track::getTrackID(void){
+    return trackID;
 }
 int Track::getSongID(void){
     return songID;
