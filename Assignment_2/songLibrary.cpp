@@ -8,9 +8,9 @@ SongLibrary::SongLibrary(){
 
 SongLibrary::~SongLibrary(){
     for(unsigned int i = 0; i< library.size(); ++i){
-        free(library[i]);
+        delete library[i];
     }
-    delete &library;
+    //delete &library;
 }
 
 vector<Song*> * SongLibrary::getSongLib(){

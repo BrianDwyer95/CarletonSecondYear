@@ -9,6 +9,12 @@ TrackLibrary::~TrackLibrary(){
         delete tracks[i];
     }
 }
+
+//adds track to tracks
+void TrackLibrary::addTrack(Track *track){
+    tracks.push_back(track);
+}
+
 //returns pointer to trackLibrary
 vector<Track*>*TrackLibrary::getTrackLib(void){
     return &tracks;
@@ -30,6 +36,13 @@ Track * TrackLibrary::getTrackBySongID(int songID){
         if(tempTrack -> getSongID() == songID) return tempTrack;
   }
   return NULL;
+}
+
+void  TrackLibrary::printTracksByAlbumID(ostream& out, int albumID){
+    for(unsigned int i = 0; i < tracks.size(); ++i){
+        Track * tempTrack = tracks[i];
+        if(tempTrack -> getAlbumID() == albumID) out << *tempTrack; 
+    }
 }
 
 //removes the track from the Track library vector as well as the reference in the vector 
