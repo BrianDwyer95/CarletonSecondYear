@@ -22,6 +22,7 @@ void SongLibrary::printSongs(void){
         library[i] -> printSong();
     }
 }
+
 void SongLibrary::removeSong(Song* song){
     for(unsigned int i = 0; i < library.size(); ++i){
         Song * tempSong = library[i];
@@ -32,7 +33,7 @@ void SongLibrary::removeSong(Song* song){
     } 
 }
 
-Song* SongLibrary::getSong(int songID){
+Song * SongLibrary::getSong(int songID){
     for(unsigned int i = 0; i < library.size(); ++i){
           Song * tempSong = library[i];
           if(tempSong -> getSongID() == songID) return tempSong;
