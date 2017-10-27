@@ -16,9 +16,10 @@ class Song{
             return *this;
         }        
         ~Song();
-        string getTitle(void);
-        string getComposer(void);
-        int getSongID(void);
+        string  getTitle(void);
+        string  getComposer(void);
+        int     getSongID(void);
+        void    printSong(void);
     private:
         int songID;
         string title;
