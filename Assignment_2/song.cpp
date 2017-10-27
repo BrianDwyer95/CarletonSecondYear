@@ -33,3 +33,7 @@ string Song::getComposer(void){
 int Song::getSongID(void){
     return songID;
 }
+
+void Song::printSong(void){
+    cout << "Song ID: " << songID << " Song Title: " << title << " Song composer " << composer << endl;
+}
