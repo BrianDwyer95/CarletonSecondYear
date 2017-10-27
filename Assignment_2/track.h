@@ -13,7 +13,6 @@
          int    getTrackNumber(void);
          int    getAlbumID(void);
          void   printTrack(ostream & out);
-
          friend ostream & operator<<(ostream & out, Track & t) {
             t.printTrack(out);
             return out;

@@ -9,6 +9,11 @@ TrackLibrary::~TrackLibrary(){
         delete tracks[i];
     }
 }
+//adds track to tracks
+void TrackLibrary::addTrack(Track *track){
+    tracks.push_back(track);
+}
+
 //returns pointer to trackLibrary
 vector<Track*>*TrackLibrary::getTrackLib(void){
     return &tracks;

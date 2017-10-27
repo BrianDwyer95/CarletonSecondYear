@@ -1,6 +1,5 @@
 #include <iostream>
-#include "songLibrary.h"
-
+#include "trackLibrary.h"
 using namespace std;
     
 int main(){
@@ -8,6 +7,7 @@ int main(){
     
     
     SongLibrary * lib = new SongLibrary();
+    TrackLibrary * tLib = new TrackLibrary();
 
     Song * newSong =    new Song(1234,"bob","Collection");
     Song * newSong2 =   new Song(1235,"bobSTANLDER","Collection");
@@ -23,9 +23,20 @@ int main(){
     
     lib -> removeSong(newSong2);
     
+    
+    Track * newTrack =    new Track(1,"Bob.mp3",1000,1234,1);
+    Track * newTrack2 =   new Track(2,"bob2.mp3",1000,1235,2);
+    Track * newTrack3 =   new Track(3,"bob3.mp3",1000,1236,3);
 
-    cout << * lib;
+    tLib -> addTrack(newTrack);
+    tLib -> addTrack(newTrack2);
+    tLib -> addTrack(newTrack3);
+    
+    cout << *tLib;
+    tLib -> removeTrack(newTrack2);
+    cout << * tLib;
 
     delete lib;
+    delete tLib;
     return 0;
 }

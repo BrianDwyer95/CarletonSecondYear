@@ -16,8 +16,10 @@ Track::Track(Track & anTrack){
     this -> trackNumber = anTrack.trackNumber;
 }
 
+
 Track::~Track(){}
 
+//Getters and such
 string Track::getFileName(void){
     return mp3;
 }
