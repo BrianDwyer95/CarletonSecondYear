@@ -34,6 +34,6 @@ int Track::getAlbumID(void){
     return albumID;
 }
 
-void Track::printTrack(void){
-    cout << "MP3 file: " << mp3 << " SongID: " << songID << " Track Number: " << trackNumber << endl;
+void Track::printTrack(ostream & out){
+    out << "MP3 file: " << mp3 << " SongID: " << songID << " Track Number: " << trackNumber << endl;
 }

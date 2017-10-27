@@ -8,8 +8,13 @@ SongLibrary::SongLibrary(){
 
 SongLibrary::~SongLibrary(){
     for(unsigned int i = 0; i< library.size(); ++i){
-        delete library[i];
+        free(library[i]);
     }
+    delete &library;
+}
+
+vector<Song*> * SongLibrary::getSongLib(){
+    return &library;
 }
 
 void SongLibrary::addSong(Song* song){
@@ -17,11 +22,7 @@ void SongLibrary::addSong(Song* song){
     library.push_back(song);
 }
 
-void SongLibrary::printSongs(void){
-    for(unsigned int i = 0; i < library.size(); ++i){
-        library[i] -> printSong();
-    }
-}
+
 
 void SongLibrary::removeSong(Song* song){
     for(unsigned int i = 0; i < library.size(); ++i){
@@ -40,3 +41,12 @@ Song * SongLibrary::getSong(int songID){
     }
     return NULL;
 }
+
+
+void SongLibrary::printSongs(ostream & out){
+    for(unsigned int i = 0; i < library.size(); ++i){
+        Song * tempSong = library[i];
+        out << *tempSong;
+    }
+}
+

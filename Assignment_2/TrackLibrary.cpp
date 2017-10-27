@@ -9,6 +9,10 @@ TrackLibrary::~TrackLibrary(){
         delete tracks[i];
     }
 }
+//returns pointer to trackLibrary
+vector<Track*>*TrackLibrary::getTrackLib(void){
+    return &tracks;
+}
 
 //returns pointer to track in library
 Track * TrackLibrary::getTrackByID(int trackID){
@@ -39,9 +43,10 @@ void TrackLibrary::removeTrack(Track* track){
     } 
 }
 
-void TrackLibrary::printTracks(void){
+void TrackLibrary::printTracks(ostream & out){
     for(unsigned int i = 0; i < tracks.size(); ++i){
-        tracks[i] -> printTrack();
+        Track * tempTrack = tracks[i];
+        out << *tempTrack;
     }
 }
 
