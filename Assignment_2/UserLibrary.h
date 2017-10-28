@@ -4,13 +4,13 @@
 
 using namespace std;
 
-class SongLibrary{
+class UserLibrary{
     public:
         UserLibrary();
         ~UserLibrary();
         void addUser(User *user);
         User * getUser(int user_id);
-        void removeUser(Song *song);
+        void removeUser(User *user);
         void displayUsers();
     private:
         UserLibrary(UserLibrary& userlibrary);
