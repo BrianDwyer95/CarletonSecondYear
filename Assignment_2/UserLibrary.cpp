@@ -35,7 +35,7 @@ void UserLibrary::removeUser(User* user){
 User * UserLibrary::getUser(int user_id){
     for(unsigned int i = 0; i < library.size(); ++i){
           User * temp = library[i];
-          if(temp -> getUserID() == user_id) return temp;
+          if(temp -> getID() == user_id) return temp;
     }
     return NULL;
 }
