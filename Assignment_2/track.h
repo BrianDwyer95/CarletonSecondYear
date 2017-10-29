@@ -1,3 +1,6 @@
+#ifndef _track_h
+#define _track_h
+
  #include "songLibrary.h"
  #include <iostream>
  using namespace std;
@@ -7,13 +10,15 @@
          Track(int trackID, string mp3, int albumID, int songID, int trackNumber);
          Track(Track& antrack);
          ~Track();
+         Song * getTrackSong();
          string getFileName(void);
          int    getTrackID(void);
          int    getSongID(void);
          int    getTrackNumber(void);
          int    getAlbumID(void);
          void   printTrack(ostream & out);
-         
+         void   addSongToTrack(Song * s);
+         void   removeSongFromTrack();
          friend ostream & operator<<(ostream & out, Track & t) {
             t.printTrack(out);
             return out;
@@ -37,9 +42,12 @@
         }
 
      private:
+         Song * tSong;
          string mp3;
          int    trackID;
          int    albumID;
          int    songID;
          int    trackNumber;
  };
+
+#endif

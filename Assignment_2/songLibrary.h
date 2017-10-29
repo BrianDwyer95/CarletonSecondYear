@@ -1,3 +1,5 @@
+#ifndef _songLibrary_h
+#define _songLibrary_h
 
 #include <string>
 #include <vector>
@@ -23,4 +25,4 @@ class SongLibrary{
         vector<Song*> library;
 };
 
-
+#endif

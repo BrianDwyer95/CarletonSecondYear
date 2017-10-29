@@ -30,6 +30,7 @@ class Recording{
         string  artist;
         string  year;
         string  producer;
+        vector<Track*> recordTracks;
 };
 
 

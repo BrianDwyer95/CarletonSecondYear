@@ -17,7 +17,23 @@ Track::Track(Track & anTrack){
 }
 
 
-Track::~Track(){}
+Track::~Track(){
+    this -> tSong = NULL;
+}
+
+void Track::addSongToTrack(Song * s){
+    if(this -> tSong == NULL){
+        this -> tSong = s;
+    }else{
+        cout << "Song has already been defined for track: " << this -> trackID << endl;
+    }
+}
+
+//if integer passed in is 1 then it will remove the song from the Song Library
+
+void Track::removeSongFromTrack(){
+        this -> tSong = NULL;
+}
 
 //Getters and such
 string Track::getFileName(void){

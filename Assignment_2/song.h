@@ -1,3 +1,6 @@
+#ifndef _song_h
+#define _song_h
+
 #include <string>
 #include <iostream>
 
@@ -34,6 +37,6 @@ class Song{
         string composer;
 };
 
-
+#endif
 
  

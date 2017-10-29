@@ -1,3 +1,6 @@
+#ifndef _TrackLibrary_h
+#define _TrackLibrary_h
+
 #include "track.h"
 #include <vector>
 
@@ -20,3 +23,5 @@ class TrackLibrary{
         TrackLibrary(TrackLibrary & anTracks){}        
         vector<Track*> tracks;
 };
+
+#endif
