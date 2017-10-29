@@ -1,3 +1,4 @@
+
 #include "trackLibrary.h"
 
 TrackLibrary::TrackLibrary(){
@@ -36,6 +37,15 @@ Track * TrackLibrary::getTrackBySongID(int songID){
         if(tempTrack -> getSongID() == songID) return tempTrack;
   }
   return NULL;
+}
+
+//return true if track is found false if not
+bool TrackLibrary::checkTrackByID(int trackID){
+    for(unsigned int i = 0; i < tracks.size(); ++i){
+        Track * tempTrack = tracks[i];
+        if(tempTrack -> getTrackID() == trackID) return true;
+  }
+  return false;
 }
 
 void  TrackLibrary::printTracksByAlbumID(ostream& out, int albumID){

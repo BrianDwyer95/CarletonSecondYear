@@ -38,6 +38,14 @@ Record * RecordingLibrary::getRecord(int recordID){
     return NULL;
 }
 
+bool RecordingLibrary::getRecord(int recordID){
+    for(unsigned int i = 0; i < library.size(); ++i){
+          Record * tempRecord = records[i];
+          if(tempRecord -> getSongID() == recordID) return true;
+    }
+    return false;
+}
+
 
 void RecordingLibrary::printRecords(ostream & out){
     for(unsigned int i = 0; i < library.size(); ++i){

@@ -14,6 +14,7 @@ class SongLibrary{
         void addSong(Song *song);
         vector<Song*> * getSongLib(void);
         Song * getSong(int songID);
+        bool checkSong(int songID);
         void removeSong(Song *song);
         void printSongs(ostream & out);
         friend ostream & operator<<(ostream & out, SongLibrary & lib) {

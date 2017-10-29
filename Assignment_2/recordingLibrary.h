@@ -15,6 +15,7 @@ class RecordingLibrary{
         void removeRecording(Recording *record);
         vector<Recording*> * getRecords();
         Recording* getRecord(int recordID);
+        bool checkRecordingByID(int trackID);
         void printRecordings();
 
     private:

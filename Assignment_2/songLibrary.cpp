@@ -43,6 +43,14 @@ Song * SongLibrary::getSong(int songID){
     return NULL;
 }
 
+bool SongLibrary::checkSong(int songID){
+    for(unsigned int i = 0; i < library.size(); ++i){
+          Song * tempSong = library[i];
+          if(tempSong -> getSongID() == songID) return true;
+    }
+    return false;
+}
+
 
 void SongLibrary::printSongs(ostream & out){
     for(unsigned int i = 0; i < library.size(); ++i){

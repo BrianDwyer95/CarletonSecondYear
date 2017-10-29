@@ -10,6 +10,7 @@ class TrackLibrary{
         ~TrackLibrary();
         Track * getTrackByID(int trackID);
         Track * getTrackBySongID(int songID);
+        bool checkTrackByID(int trackID);
         void addTrack(Track *track);
         void removeTrack(Track *track);
         vector<Track*>* getTrackLib(void);
